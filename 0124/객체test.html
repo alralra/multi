@@ -28,8 +28,9 @@
       }
       function p() {
         let pArray = document.getElementsByTagName("p");
-        for (let i = 0; i = pArray.length; i++) {
+        for (let i = 0; (i = pArray.length); i++) {
           alert("<p> 태그의 개수는" + i);
+          break;
         }
       }
     </script>
