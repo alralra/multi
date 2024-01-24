@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var 동물 = [];
+      동물.push("고양이");
+      동물.push("강아지");
+      동물.unshift("살쾡이");
+      동물.unshift("햄스터");
+      // unshift는 맨 앞에 요소추가
+      동물.shift();
+
+      //pop은 맨뒤에있는 요소 삭제
+      var 마지막동물 = 동물.pop();
+
+      document.write(마지막동물);
+    </script>
+  </body>
+</html>

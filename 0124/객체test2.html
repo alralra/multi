@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>innerHTML</h1>
+    <hr />
+    <p id="pp" onclick="onp()">어디로 갈까요?? 클릭해보세연</p>
+
+    <script>
+      function onp() {
+        var pro = prompt("어디로 가고싶으세염?");
+        let p = document.getElementById("pp");
+        p.innerHTML = pro;
+      }
+    </script>
+  </body>
+</html>

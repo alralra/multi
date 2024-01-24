@@ -1,0 +1,16 @@
+.red {
+  background-color: aqua;
+  color: red;
+}
+.green {
+  background-color: rgb(150, 144, 144);
+  color: green;
+}
+.blue {
+  background-color: blue;
+  color: rgb(255, 59, 196);
+}
+.purple {
+  background-color: blanchedalmond;
+  color: purple;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var math = prompt("수식 입력");
+
+      //   if (math == "") {
+      //     document.write("숫자를 입력하시오");
+      //   } else {
+      //     var mat = eval(math);
+      //     document.write(math + " = " + mat);
+      //   }
+
+      //   ot = parseInt(prompt("티셔츠 개수 입력"));
+      //   os = parseInt(prompt("스웨터 개수 입력"));
+      //   var osprice = 30000 * os;
+      //   var otprice = 10000 * ot;
+      //   var total = 0;
+      //   total = total * otprice + osprice;
+      //   if (total > 100000) {
+      //     total = total * 0.85;
+      //   } else {
+      //     total = total * 0.95;
+      //   }
+      //   document.write("티셔츠 개수 : ", ot, "<br>");
+      //   document.write("스웨터 개수 : ", os, "<br>");
+      //   document.write("합계", total, "원");
+
+      //   var pw = prompt("비밀번호를 입력하세요");
+      //   var pwresult = "";
+
+      //   if (pw.length >= 9) {
+      //     pwresult = "good";
+      //   } else if (5 <= pw.length) {
+      //     pwresult = "normal";
+      //   } else {
+      //     pwresult = "bad";
+      //   }
+      //   document.write("<h1>당신의 비밀번호 : </h1>" + pw + "<br>");
+      //   document.write("비밀번호의 안정성은" + pwresult + "입니다.");
+
+      var first = parseInt(prompt("첫 번째 숫자를 입력하세요"));
+      var second = parseInt(prompt("두 번째 숫자를 입력하세요"));
+      var total;
+      if (first > second) {
+        if (first % 2 == 0) {
+          document.write(first + "가 큰 수 이고, 짝수이다" + "<br>");
+        } else {
+          document.write(first + "가 큰 수 이고, 홀수이다" + "<br>");
+        }
+      } else {
+        if (second % 2 == 0) {
+          document.write(second + "가 큰 수 이고, 짝수이다" + "<br>");
+        } else {
+          document.write(second + "가 큰 수 이고, 홀수이다" + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

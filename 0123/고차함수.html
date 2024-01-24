@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 인자로 전달되는 시점에 바로 함수를
+      //   호출하는 것이 아닌 고차 함수 내부에서 필요한 순간에 호출되는 함수
+
+      const add = (a, b) => a + b;
+      const sub = (a, b) => a - b;
+
+      function calculator(a, b, clac) {
+        var result = clac(a, b);
+        console.log(result);
+        return result;
+      }
+      calculator(1, 1, add);
+      calculator(1, 2, sub);
+      
+
+    //   calculator 함수가 정의될 시점에는 calc 자리에 어떤 함수가 올 지 모름
+    
+    //   외부에서 calculator함수를 호출 할 때마다 calc 함수에 전되되는 값이 달라짐
+    </script>
+  </body>
+</html>

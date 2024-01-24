@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- 이건 내꺼 -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <title>Vintage Website</title>
+  </head>
+  <body>
+    <script src="./js/jquery.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <header>
+      <div class="header-top">
+        <div class="inner">
+          <h1>Vintage</h1>
+          <i class="fa-solid fa-bars"></i>
+          <div class="header-top-right">
+            <div>
+              <i class="fa-solid fa-clock"></i>
+              09:00AM — 05:00PM
+            </div>
+            <div>
+              <i class="fa-solid fa-phone"></i>
+              +1 010-3375-2531
+            </div>
+            <a href="./login.html" class="btn">Log in</a>
+          </div>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <div class="inner">
+          <nav>
+            <ul class="gnb">
+              <li>
+                <a href="#" class="on">HOME</a>
+              </li>
+              <li>
+                <a href="#">bulletin board</a>
+                <ul class="submenu">
+                  <li>submenu1</li>
+                  <li>submenu2</li>
+                  <li>submenu3</li>
+                </ul>
+              </li>
+              <li>
+                <a href="./shop.html">Shop</a>
+              </li>
+              <li>
+                <a href="#">My Pages</a>
+                <ul class="submenu">
+                  <li>submenu1</li>
+                  <li>submenu2</li>
+                  <li>submenu3</li>
+                  <li>submenu4</li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="snslist">
+            <a href="#">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#">
+              <i class="fa-brands fa-google"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      document.querySelector(".fa-bars").onclick = function () {
+        document.querySelector(".header-bottom").style.left = "0px";
+      };
+    </script>
+
+    <section class="slideseciton">
+      <div class="swiper mainbanner">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide slide1">
+            <div class="inner">
+              <h4>Vintage Shop</h4>
+              <h2>Custome Case</h2>
+              <a href="#" class="btn3">Read more</a>
+            </div>
+          </div>
+          <div class="swiper-slide slide2">
+            <div class="inner">
+              <h4>Vintage Shop</h4>
+              <h2>Custome Wallet</h2>
+              <a href="#" class="btn3">Read more</a>
+            </div>
+          </div>
+          <div class="swiper-slide slide3">
+            <div class="inner">
+              <h4>Vintage Shop</h4>
+              <h2>Card Case</h2>
+              <a href="#" class="btn3">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        var mainslide = new Swiper(".mainbanner", {
+          loop: true,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
+    </section>
+
+    <section class="tabsection">
+      <div class="inner">
+        <div class="imgbox">
+          <img src="./img/vintage1.jpg" alt="music" />
+        </div>
+        <div class="tabbox">
+          <h3>Vintage</h3>
+          <div class="tab">
+            <div class="tabtitle">
+              <div class="on" data-tab="0">About Us</div>
+              <div data-tab="1">Shop</div>
+              <div data-tab="2">Our mission</div>
+            </div>
+            <div class="tabcontent">
+              <div>
+                The term "빈티지" is translated to English as "vintage." This
+                term refers to classic styles, designs, and items associated
+                with a specific era or period. Vintage items carry the charm and
+                unique feeling of the past and often reinterpret past trends and
+                design elements in a contemporary manner. Vintage items can be
+                found in various fields such as fashion, furniture, accessories,
+                cars, and more, and they are beloved by many for their distinct
+                appeal.
+              </div>
+              <div>
+                We sell phone cases, wallets, and card cases. I will shake your
+                heart with a vintage image that is different from other shopping
+                malls.
+              </div>
+              <div>
+                Our mission missionmissionmssionmissi ssionmis
+                ionmssionmississiondmissionm ssionmis // sionmissio
+                nmissionmission Our mission missionmissionmssionmissi ssionmis
+                ionmssionmississiondmissionm ssionmis // sionmissio
+                nmissionmission
+              </div>
+            </div>
+          </div>
+          <script>
+            $(".tabtitle>div").click(function () {
+              $(".tabtitle>div").removeClass("on");
+              this.classList.add("on");
+
+              $(".tabcontent>div").hide();
+              var mynum = this.dataset.tab;
+              $(".tabcontent>div").eq(mynum).show();
+
+              // $(this).addClass('on');
+            });
+          </script>
+
+          <div class="btnbox">
+            <a href="#" class="btn">Get In Touch</a>
+            <a href="#" class="btn2">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bgsection">
+      <div>
+        <h3>Notice</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetu adipisicing elit. Quaerat,
+          accusantium.<br />
+          Officiis amet quidem, numquam debitis veritatisdeleniti unde at illum
+          assumenda temporibus,<br />
+          maxime suscipit non harum voluptas? Hic, error nobis.
+        </p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </section>
+
+    <section class="service">
+      <div class="inner">
+        <h3 data-aos="flip-up">Our service</h3>
+        <ul class="servicebox">
+          <li data-aos="fade-up" data-aos-duration="1000">
+            <div class="icon">
+              <i class="fa-solid fa-music"></i>
+            </div>
+            <div class="txt">
+              <h4>Music</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicingpiditate illo
+                sapiente
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
+            <div class="icon">
+              <i class="fa-solid fa-drum"></i>
+            </div>
+            <div class="txt">
+              <h4>Shop</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consecteturit. Doloribus vero
+                mollitia quos cupiditate illo sapiente
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="1000" data-aos-duration="1000">
+            <div class="icon">
+              <i class="fa-regular fa-circle-play"></i>
+            </div>
+            <div class="txt">
+              <h4>SNS</h4>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicin</p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="1500" data-aos-duration="1000">
+            <div class="icon">
+              <i class="fa-brands fa-soundcloud"></i>
+            </div>
+            <div class="txt">
+              <h4>Office</h4>
+              <p>
+                amet consectetur adipisicing elit. Doloribus vero mollitia quos
+                cupiditate illo sapiente
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="2000" data-aos-duration="1000">
+            <div class="icon">
+              <i class="fa-solid fa-guitar"></i>
+            </div>
+            <div class="txt">
+              <h4>Notice</h4>
+              <p>
+                mollitia quos cupiditate illo sapientellitia quos cupiditate
+                illo sapientellitia quos cupiditate illo sapiente
+              </p>
+            </div>
+          </li>
+          <li data-aos="fade-up" data-aos-delay="2500" data-aos-duration="1000">
+            <div class="icon">
+              <i class="fa-solid fa-headphones"></i>
+            </div>
+            <div class="txt">
+              <h4>History</h4>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Doloribus vero mollitia quos cupiditate illo sapiente
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- our service end -->
+
+    <div style="height: 800px"></div>
+
+    <script>
+      AOS.init();
+    </script>
+    <footer></footer>
+  </body>
+</html>

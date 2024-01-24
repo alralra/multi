@@ -1,0 +1,430 @@
+@font-face {
+  font-family: "GowunBatang-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/GowunBatang-Regular.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "GowunBatang-Regular";
+}
+
+body {
+  background-color: #777;
+}
+
+/* 각 섹션에서 가운데 정렬을하고 1300px의 기본 가로값을 갖게 만드는 디자인 */
+.inner {
+  width: 1300px;
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+/* 각 섹션의 제목들 */
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 5rem;
+}
+h3 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid darkkhaki;
+  background-color: darkkhaki;
+  margin-top: 30px;
+}
+
+.btn2 {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: rgb(151, 151, 111);
+  border: 2px solid rgb(151, 151, 111);
+  margin-top: 30px;
+}
+.btn3 {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-top: 30px;
+}
+
+.mainbanner {
+  height: 40vw;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  h2 {
+    font-size: 3rem;
+  }
+  .mainbanner {
+    text-align: center;
+    height: 70vw;
+  }
+}
+
+header {
+  background-color: #fff;
+}
+
+.header-top .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.header-top .btn {
+  margin-top: 0;
+}
+.header-top i {
+  color: darkgoldenrod;
+}
+.header-top-right {
+  display: flex;
+  align-items: center;
+}
+.header-top-right > div {
+  margin-right: 30px;
+}
+
+.header-bottom {
+  background: darkkhaki;
+}
+.header-bottom .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gnb {
+  display: flex;
+  font-weight: 600;
+}
+.gnb > li > a {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  padding: 15px 30px 21px 30px;
+  font-size: 1.3rem;
+  border-top: 6px solid lightgoldenrodyellow;
+}
+.gnb > li > .on {
+  border-top: 6px solid #ffde21;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.gnb > li:hover a {
+  border-top: 6px solid #ffde21;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.gnb > li {
+  position: relative;
+}
+.submenu {
+  position: absolute;
+  width: 200px;
+  background-color: #fff;
+  z-index: 50;
+  display: none;
+  padding: 10px;
+}
+.submenu li:hover {
+  background-color: #ffde21;
+  cursor: pointer;
+}
+
+.gnb > li:hover .submenu {
+  display: block;
+}
+
+.snslist a {
+  color: #fff;
+  font-size: 1.4rem;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+@media (max-width: 800px) {
+  .header-top-right {
+    display: none;
+  }
+  .fa-bars {
+    font-size: 1.5rem;
+    color: #000 !important;
+  }
+
+  .header-bottom {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    /* display: none; */
+    transition: 1s;
+  }
+}
+
+@media (min-width: 801px) {
+  .fa-bars {
+    display: none !important;
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.swiper-slide h2 {
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+}
+.swiper-slide-active h2 {
+  animation: fly 2s;
+}
+@keyframes fly {
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+}
+.swiper-slide-active h4 {
+  animation: fly2 2s;
+}
+@keyframes fly2 {
+  0% {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+}
+.swiper-slide-active a {
+  animation: upupup 2s;
+}
+@keyframes upupup {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+}
+
+.slide1 {
+  background-image: url("../img/vintage2.jpg");
+}
+.slide1::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.inner {
+  z-index: 100;
+}
+
+.slide2 {
+  background-image: url("../img/vintage3.jpg");
+}
+.slide2::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.slide3 {
+  background-image: url("../img/vintage4.jpg");
+}
+.slide3::before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tabsection {
+  background-color: #fff;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.tabsection > .inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.imgbox,
+.tabbox {
+  width: 48%;
+}
+
+.imgbox img {
+  width: 100%;
+}
+
+.tabsection h3 {
+  text-align: left;
+}
+
+.tabtitle {
+  display: flex;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tabtitle div {
+  position: relative;
+  border-bottom: 5px solid #ddd;
+  padding-right: 30px;
+  transition: 0.5s;
+  font-weight: bold;
+}
+
+.tabtitle div::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 5px;
+  background-color: darkkhaki;
+}
+
+.tabtitle div.on {
+  color: darkkhaki;
+}
+
+.tabtitle div.on::after {
+  width: 100%;
+  transition: 1s;
+}
+
+.tabcontent {
+  min-height: 100px;
+}
+
+.tabcontent > div {
+  display: none;
+}
+
+.tabcontent > div:first-child {
+  display: block;
+}
+
+@media (max-width: 1000px) {
+  .imgbox,
+  .tabbox {
+    width: 100%;
+  }
+
+  .tabtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabtitle {
+    font-size: 0.9rem;
+  }
+
+  .tabtitle div {
+    padding-right: 15px;
+  }
+}
+
+.bgsection {
+  background-image: url("../img/vintage6.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #fff;
+  text-align: center;
+}
+
+.bgsection > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-top: 100px;
+  padding-bottom: 100px;
+  /* opacity: 0.2; */
+}
+
+.service {
+  background-color: white;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.servicebox {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-rows: 200px 200px; */
+  gap: 20px;
+}
+
+.servicebox li {
+  display: flex;
+  border: 10px solid #ddd;
+  padding: 30px;
+}
+
+.servicebox li:hover {
+  border: 10px solid #fff;
+  box-shadow: 0 0 20px rgba(123, 42, 185, 0.338);
+}
+
+@media (max-width: 1000px) {
+  .servicebox {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .servicebox {
+    grid-template-columns: 1fr;
+  }
+}
+
+.servicebox i {
+  font-size: 3rem;
+}
+
+.icon {
+  width: 25%;
+  color: darkkhaki;
+}
+
+.txt {
+  width: 75%;
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>1에서 얼마까지 더해야 3000이 넘는가연</h1>
+    <hr />
+    <script>
+      var i = 0;
+      var sum = 0;
+      while (true) {
+        i++;
+        sum += i;
+        if (sum > 3000) {
+          document.write(i + "까지 더하면 3000을 넘음 : " + sum);
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>애니메이션 효과</title>
+    <style>
+      .ball2 {
+        width: 100px;
+        height: 130px;
+        border-radius: 25px;
+        position: absolute;
+        top: 80px;
+        left: 100px;
+        animation-name: moving;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-timing-function: ease;
+        /* animation-iteration-count: 3; */
+        animation-iteration-count: infinite;
+        /* animation-direction: normal; */
+        animation-direction: alternate;
+        transform: scaleX(-1);
+      }
+      .ball {
+        width: 200px;
+        height: 250px;
+        border-radius: 25px;
+        position: absolute;
+        top: 80px;
+        left: 50px;
+        animation-name: moving2;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        /* animation-iteration-count: 3; */
+        animation-iteration-count: infinite;
+        /* animation-direction: normal; */
+        animation-direction: alternate;
+        animation-timing-function: ease;
+        transform: scaleX(-1);
+      }
+      .ball:hover {
+        animation-play-state: paused;
+      }
+      @keyframes moving {
+        from {
+          left: 100px;
+        }
+        75% {
+          transform: scaleX(-1);
+        }
+        to {
+          left: 1000px;
+          transform: scaleX(1);
+        }
+      }
+      @keyframes moving2 {
+        from {
+          left: 50px;
+        }
+        75% {
+          transform: scaleX(-1);
+        }
+        to {
+          left: 1000px;
+          transform: scaleX(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img src="./img/제리.webp" class="ball2" />
+
+    <img src="./img/tom.webp" class="ball" />
+  </body>
+</html>

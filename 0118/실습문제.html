@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열</title>
+  </head>
+  <body>
+    <script>
+      // var sum = 0;
+      // var 온도 = [15.1, 15.4, 16.1, 17.5, 19.2, 21.4];
+      // for (var total = 0; 온도.length > total; total++) sum += 온도[total];
+      // document.write("평균 온도는 " + sum / 온도.length);
+      // document.write("<br>");
+
+      // var money = [];
+      // var sum = 0;
+      // money[0] = 5000;
+      // money[1] = 10000;
+      // money[2] = 30000;
+
+      // for (var i = 0; i < money.length; i++) {
+      //   sum += money[i];
+      // }
+      // document.write("배열 money 출력" + money + "<br>");
+      // document.write("배열 money 합계" + sum);
+
+      var score = [];
+      sum = 0;
+      score[0] = random = Math.floor(Math.random() * 101);
+      score[1] = random1 = Math.floor(Math.random() * 101);
+      score[2] = random2 = Math.floor(Math.random() * 101);
+      score[3] = random3 = Math.floor(Math.random() * 101);
+      score[4] = random4 = Math.floor(Math.random() * 101);
+      for (i = 0; i < score.length; i++) {
+        sum += score[i];
+      }
+      var average = sum / score.length;
+      document.write("랜덤숫자는 : <br>" + score + "<hr>");
+      document.write("위에 더한거 합계 출력 : <br>" + sum + "<hr>");
+      document.write("위에있는거 평균출력 : " + average + "<hr>");
+
+      var itemlist = ["라면", "계란", "물", "파"];
+      document.write("<h1>라면을 만드는데 필요한 재료</h1> <hr> <ul>");
+      for (i = 0; i < itemlist.length; i++) {
+        document.write("<li>");
+        document.write(itemlist[i]);
+        document.write("</li>");
+      }
+      document.write("</ul><hr>");
+
+      var numbers = [20, 5, 8, 15, 20];
+
+      for (i = 0; i < numbers.length; i++) {
+        for (j = 0; j < numbers[i]; j++) {
+          document.write("*");
+        }
+        document.write(numbers[i] + "<br>");
+      }
+    </script>
+  </body>
+</html>

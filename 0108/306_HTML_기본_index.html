@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        background-color: coral;
+      }
+      #btn_3 {
+        background-color: skyblue;
+      }
+      .btn {
+        background-color: yellowgreen;
+      }
+      button:nth-child(4) {
+        background-color: black;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 1px 2px 1px 2px;
+      }
+      button:nth-child(4):hover {
+        background-color: red;
+      }
+      main > div > button:nth-child(5) {
+        background-color: blueviolet;
+      }
+      a:visited {
+        color: green;
+      }
+      input:focus {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <button class="btn" id="btn_1">1번 버튼</button>
+      <button class="btn" id="btn_2">2번 버튼</button>
+      <button class="btn" id="btn_3">3번 버튼</button>
+      <button class="btn" id="btn_4">로그인</button>
+      <button class="btn" id="btn_5">뒤로가기</button>
+    </div>
+    <main>
+      <div>
+        <button class="btn" id="btn_1">1번 버튼</button>
+        <button class="btn" id="btn_2">2번 버튼</button>
+        <button class="btn" id="btn_3">3번 버튼</button>
+        <button class="btn" id="btn_4">로그인</button>
+        <button class="btn" id="btn_5">뒤로가기</button>
+        <a href="https://naver.com">네이버</a>
+        <input type="text" />
+      </div>
+    </main>
+  </body>
+</html>

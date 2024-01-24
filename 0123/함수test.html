@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var names = ["Ian", "David", "Darren", "peter"];
+      var printName = (a) => {
+        for (var i = 0; i < a.length; i++) {
+          document.write(a[i] + " ");
+        }
+      };
+      document.write("<h3> 이름 출력</h3><hr>");
+      printName(names);
+
+      var printLongName = (b) => {
+        var longest = names[0];
+        for (var i = 1; i < names.length; i++) {
+          if (names[i].length > longest.length) {
+            longest = names[i];
+          }
+        }
+        document.write(longest);
+      };
+      document.write("<h3>길이가 긴 이름 출력</h3><hr>");
+      printLongName(names);
+      document.write("<hr>");
+
+      var printStar = (n) => {
+        if (isNaN(n) || n < 1) {
+          document.write("입력오류");
+          return;
+        }
+        for (var i = 1; i <= n; i++) {
+          for (var j = 0; j < i; j++) {
+            document.write("*");
+          }
+          document.write("<br>");
+        }
+      };
+
+      var star = parseInt(prompt("정수를 입력하세요"));
+      printStar(star);
+    </script>
+  </body>
+</html>
