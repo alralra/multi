@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>계산해봅시다</h1>
+    <hr />
+    <p>2 + 4 =<span id="sum" onclick="dab()">답</span></p>
+    <p>4 * 20 + 64 =<span id="sum1" onclick="dab1()">답</span></p>
+    <p>20/5-8*2 =<span id="sum2" onclick="dab2()">답</span></p>
+
+    <script>
+      function dab() {
+        var span = document.getElementById("sum");
+        span.innerHTML = 2 + 4;
+      }
+      function dab1() {
+        var span = document.getElementById("sum1");
+        span.innerHTML = 4 * 20 + 64;
+      }
+      function dab2() {
+        var span = document.getElementById("sum2");
+        span.innerHTML = 20 / 5 - 8 * 2;
+      }
+    </script>
+  </body>
+</html>

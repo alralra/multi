@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="p">마우스를 올려 보세요</p>
+    <button onclick="eventFunction(event)">클릭하세요</button>
+
+    <script>
+      // let p = document.querySelector("p");
+
+      /////2번방식
+      //1. 이름을 가진 이벤트 리스너
+      //   p.onclick = clickFunction;
+      //첫번째 매개변수 : 클릭 이벤트에 대한 정보가 객체로 저장
+      function eventFunction(e) {
+        alert(e.type);
+      }
+      //e.type : 이벤트종류
+      //e. target : 이벤트가 발생한 객체 -> p태그 객체
+      //e. target.tagName : 이벤트가 발생한 태그의 이름 -> P
+
+      //2. 이름이 없는 이벤트 리스너 = 익명함수
+      //   p.onclick = function (e) {
+      //     alert(e.type);
+      //   };
+      document.getElementById("p").onmouseover = eventFunction;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="soo">안녕하세요</p>
+    <p></p>
+    <p class="css">안녕하세요</p>
+    <p></p>
+    <p id="javascript">안녕하세요</p>
+    <p>
+      <script>
+        let pList = document.querySelectorAll(".soo, #javascript");
+        for (let i = 0; i < pList.length; i++) {
+          let item = pList[i];
+          item.style.color = "blue";
+          item.style.fontSize = "20px";
+        }
+      </script>
+    </p>
+  </body>
+</html>
