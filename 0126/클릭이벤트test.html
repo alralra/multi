@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3>span 태그에만 onmouseover/onmouseout</h3>
+    <hr />
+    <p>
+      span 태그에 대해서만 <span>마우스</span>가 올라올 때 밑줄이 그어지고
+      <span>마우스</span>가 내려갈 때 밑줄이 사라지도록
+      <span>자바스크립트 코드</span>를 작성한다.
+    </p>
+    <script>
+      document.onmouseover = function (e) {
+        console.log(e.target);
+
+        // H3-> h3
+        if (e.target.tagName.toLowerCase() != "span") return;
+        e.target.style.textDecoration = "underline";
+      };
+      document.onmouseout = function (e) {
+        if (e.target.tagName.toLowerCase() != "span") return;
+        e.target.style.textDecoration = "none";
+      };
+      // 지금 펼쳐있는 윈도우 바깥쪽을 누르면 벌어지는 이벤트
+      window.onblur = function (e) {
+        document.body.style.backgroundColor = "gray";
+      };
+      window.onfocus = function (e) {
+        document.body.style.backgroundColor = "white";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="radio" name="city" value="seoul" />서울
+      <input type="radio" name="city" value="busan" />부산
+      <input type="radio" name="city" value="chunchen" />춘천
+      <input type="radio" name="city" value="daegu" />대구
+      <input type="radio" name="city" value="gyungju" />경주
+      <input type="button" value="find checked" onclick="findChecked()" />
+    </form>
+
+    <script>
+      //   let kcity = document.getElementsByName("city");
+      //   // kcity[0], kcity[1], kcity[2] 리턴
+
+      function findChecked() {
+        let found = null;
+        let kcity = document.getElementsByName("city");
+        for (let i = 0; i < kcity.length; i++) {
+          if (kcity[i].checked == true) found = kcity[i];
+        }
+        if (found != null) alert(found.value + "이 선택되었음");
+      }
+    </script>
+  </body>
+</html>
