@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>숫자맞추기 게임</h1>
+    <hr />
+    <script>
+      var random = Math.floor(Math.random() * 101);
+      var num = prompt("정답을 추측해보셈");
+      num = parseInt(num);
+      while (true) {
+        if (random > num) {
+          alert("업");
+          num = prompt("정답을 추측해보셈");
+        } else if (random < num) {
+          alert("다운");
+          num = prompt("정답을 추측해보셈");
+        } else {
+          document.write("숫자는" + num + "입니다.<br>");
+          document.write("정답~~!");
+          break;
+        }
+      }
+    </script>
+  </body>
+</html>

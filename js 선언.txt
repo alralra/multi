@@ -1,0 +1,10 @@
+npm install -g nodemon
+
+- js 실행문
+
+nodemon 파일명
+
+
+powershell->
+Set-ExecutionPolicy RemoteSigned->
+y

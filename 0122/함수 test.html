@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function big(c, d) {
+        var sum;
+        sum = Math.max(c, d);
+        return sum;
+      }
+      var b = big("625", "555");
+      document.write("큰수 = " + b);
+      document.write("<hr>");
+
+      function pr(a, b) {
+        for (var i = 0; i < b; i++) {
+          document.write("%");
+        }
+      }
+      pr("%", 5);
+      document.write("<hr>");
+
+      var answer = parseInt(prompt("정수를 입력하세요"));
+      function sum(num) {
+        if (isNaN(num)) {
+          alert("놉");
+          return;
+        } else if (num % 1 !== 0) {
+          return;
+        }
+        if (num % 2 == 0) {
+          document.write("입력한 값 : " + num + "<br>" + "짝수");
+        } else {
+          document.write("입력한 값 : " + num + "<br>" + "홀수");
+        }
+      }
+      sum(answer);
+      document.write("<hr>");
+
+      var num = Math.floor(Math.random() * 9 + 1);
+      var num2 = Math.floor(Math.random() * 9 + 1);
+      var result = parseInt(prompt(num + "*" + num2 + " 값은 얼마입니까?"));
+      var dab = num * num2;
+      function calculator(a) {
+        if (dab == result) {
+          document.write("정답! " + num + " * " + num2 + "=" + dab + "입니다");
+        } else {
+          document.write("땡! " + num + " * " + num2 + "=" + dab + "입니다");
+        }
+      }
+      calculator(result);
+
+      var names = ["Ian", "David", "Darren"];
+    </script>
+  </body>
+</html>

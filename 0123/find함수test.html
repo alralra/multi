@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var apple = {
+        이름: "apple",
+        수량: 2,
+        가격: 1000,
+      };
+      var banana = {
+        이름: "banana",
+        수량: 3,
+        가격: 2500,
+      };
+      var orange = {
+        이름: "orange",
+        수량: 5,
+        가격: 5000,
+      };
+
+      var fruits = [apple, banana, orange];
+
+      var favorite = fruits.find((name) => name === banana);
+      document.write("이름 : " + favorite.이름 + "<br>");
+      document.write("수량 : " + favorite.수량 + "<br>");
+      document.write("가격 : " + favorite.가격 + "<br>");
+
+      var array = ["javascript", "css", "react", "html"];
+      array.find((a) => {
+        if (a.length >= 5) {
+          document.write(a + " : " + a.length + "<br>");
+        }
+      });
+    </script>
+  </body>
+</html>

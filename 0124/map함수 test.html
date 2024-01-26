@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+      const numbers = [5, 19, 42, 36, 70];
+
+      const map1 = numbers.map((item) => {
+        item = item * 2;
+        if (item % 3 == 0) {
+          return item * 2;
+        } else {
+          return item;
+        }
+      });
+      document.write("결과 : " + map1);
+    </script>
+  </body>
+</html>

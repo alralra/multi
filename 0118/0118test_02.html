@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자판기</title>
+  </head>
+  <body>
+    <script>
+      var count = 10;
+      var coffee = 300;
+      while (true) {
+        var i = prompt("돈을 넣어주세요(남은커피" + count + ")");
+        if (count < 1) {
+          alert("커피가 다 떨어졌습니다. 판매를 중지합니다.");
+          break;
+        }
+        if (i > coffee) {
+          count--;
+          alert(
+            "거스름돈" +
+              (i - coffee) +
+              "원과 커피를 줍니다. (남은커피:)" +
+              count
+          );
+        } else if (i == coffee) {
+          count--;
+          alert("가져가라.");
+        } else {
+          alert("돈 더 가져와 십");
+        }
+      }
+
+     
+    </script>
+  </body>
+</html>

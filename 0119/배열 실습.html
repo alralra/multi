@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let scores = [];
+      var score = 0;
+      var count = 0;
+      var max_score = 0;
+      var min_score = 100;
+      var total = 0;
+
+      while (count < 5) {
+        score = parseInt(prompt("점수 입력 : "));
+        scores.push(score); //[10 , 5]
+        //최대값 저장
+        //max_score : 0
+        // score : 10
+        // [10]=> 최대값 10
+        if (max_score < score) {
+          max_score = score;
+        }
+        //최소값 저장
+        // min_score : 100
+        //score : 10
+        if (min_score > score) {
+          min_score = score; //min_score = 10
+        }
+        count += 1;
+      }
+      document.write("입력한 점수 : ", scores);
+      document.write("<hr>");
+      document.write("최고점수 : ", max_score);
+      document.write("<br>");
+      document.write("최저 점수 : ", min_score);
+      document.write("<hr>");
+
+      var maxIndex = scores.indexOf(max_score);
+      var minIndex = scores.indexOf(min_score);
+
+      //최고 점수, 최저 점수 제거
+      scores.splice(maxIndex, 1);
+      scores.splice(minIndex, 1);
+
+      //중복제거
+      var newArr = [];
+      for (var i = 0; i < scores.length; i++) {
+        if (!newArr.includes(scores[i])) {
+          newArr.push(scores[i]);
+        }
+      }
+
+      var sum = 0;
+      for (var j = 0; j < scores.length; j++) {
+        sum += scores[j];
+      }
+      document.write("합 : ", sum, "<br>");
+      document.write("평균 : ", sum / scores.length);
+    </script>
+  </body>
+</html>

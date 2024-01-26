@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사용자 정보 입력받고 출력하기</title>
+    <style>
+      #me {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1 id="name"></h1>
+    <p id="hobby"></p>
+    <p id="song"></p>
+
+    <script>
+      const nameElement = document.querySelector("#name");
+      let name = prompt("당신의 이름은?");
+      nameElement.textContent = name;
+
+      const hobbyElement = document.querySelector("#hobby");
+      let hobby = prompt("당신의 취미는?");
+      //   hobbyElement.textContent = hobby;
+      hobbyElement.textContent = `저의 취미는 ${hobby} 입니다`;
+
+      document.querySelector("#song").textContent = `즐겨 듣는 노래는 ${prompt(
+        "즐겨 듣는 노래는"
+      )}입니다`;
+    </script> -->
+    <h1 id="me"></h1>
+    <p id="tea"></p>
+    <p id="anju"></p>
+    <script>
+      document.querySelector("#me").textContent = `제 이름은 ${prompt(
+        "너 이름은?"
+      )}입니다`;
+
+      document.querySelector(
+        "#tea"
+      ).textContent = `가장 좋아하는 강사는 ${prompt("닥터윌을 치세요")}입니다`;
+      document.querySelector(
+        "#anju"
+      ).textContent = `회식 때 가장 먹고싶은 안주는 ${prompt(
+        "먹고싶은안주"
+      )}입니다`;
+    </script>
+  </body>
+</html>
