@@ -1,0 +1,18 @@
+*git bash
+
+
+cd 디렉터리: change directory 티렉터리 이동
+pwd : print working directory 현재 디렉터리 출력
+ls -l : list 현재 디렉터리의 폴더 및 파일들 확인
+ls -al : 숨김파일까지보기(앞에 .붙으면 숨김)
+touch 파일명:빈 파일 생성하기
+mkdir 폴더명 : 폴더 생성하기
+rmdir 폴더명: 폴더 삭제하기
+rm -f 파일명: 파일 삭제하기
+clear:화면지우기
+cd.. : 바로 앞폴더로 이동
+vi 파일명 --> 명령모드 --> i또는 a키
+--> 편집보드 --> ESC키 --> 명령모드 --> :wq  
+번복하기         :q!
+
+cat 파일명 : 내용출력
