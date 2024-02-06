@@ -62,3 +62,9 @@ input[type="submit"]:hover {
 #one {
   color: rgb(0, 0, 0);
 }
+.back input {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0;
+}
