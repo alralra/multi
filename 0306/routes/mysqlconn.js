@@ -1,4 +1,5 @@
-const mysql = require("mysql");
+const mysql = require("mysql2");
+
 // connection 객체 생성
 const connection = mysql.createConnection({
   user: "root",
@@ -6,4 +7,5 @@ const connection = mysql.createConnection({
   database: "BookDB",
   port: 3306,
 });
+
 module.exports = connection;
