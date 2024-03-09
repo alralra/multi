@@ -4,14 +4,95 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../main.css" />
+    <script src="/routes/jquery.js"></script>
+    <script src="/routes/main.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--swiper-theme-color);
+      }
+
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+    </style>
   </head>
   <body>
     <header>
       <p class="banner" button onclick="location.href='museum.html'">맨코</p>
       <div class="menu">
         <ul id="exhibition" data-tab="0">
-          뉴스
+          News
         </ul>
         <div class="menu-bar" id="menu-bar-exhibition">
           <li button onclick="location.href='exhibition.html'">Present</li>
@@ -19,7 +100,7 @@
         </div>
 
         <ul id="education" data-tab="1">
-          선수단
+          Player
         </ul>
         <div class="menu-bar" id="menu-bar-education">
           <li button onclick="location.href='introduction.html'">
@@ -31,14 +112,14 @@
           </li>
         </div>
         <ul id="collection" data-tab="2">
-          커뮤니티
+          Community
         </ul>
         <div class="menu-bar" id="menu-bar-collection">
           <li button onclick="location.href='collection.html'">View</li>
           <li button onclick="location.href='method.html'">Method</li>
         </div>
         <ul id="digital-art" data-tab="3">
-          역사
+          History
         </ul>
         <div class="menu-bar" id="menu-bar-digital-art">
           <li button onclick="location.href='digital.html'">Main</li>
@@ -91,20 +172,151 @@
         </div>
       </div>
       <div class="main35">
-        <div class="main3"></div>
-        <div class="main4"></div>
-        <div class="main5"></div>
+        <div class="topic1">
+          <div class="hr"></div>
+          <p class="today">Today Match</p>
+        </div>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="slide1"></div>
+            <div class="swiper-slide" id="slide2">
+              <div class="slide2_p">
+                <p>Match Time</p>
+                <br />
+                <br />
+                <p>03/17 (일)</p>
+                <p>01:30</p>
+              </div>
+              <div class="slide2_img"></div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+          <div class="autoplay-progress">
+            <svg viewBox="0 0 48 48">
+              <circle cx="24" cy="24" r="20"></circle>
+            </svg>
+            <span></span>
+          </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+          const progressCircle = document.querySelector(
+            ".autoplay-progress svg"
+          );
+          const progressContent = document.querySelector(
+            ".autoplay-progress span"
+          );
+          var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: false,
+            },
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            on: {
+              autoplayTimeLeft(s, time, progress) {
+                progressCircle.style.setProperty("--progress", 1 - progress);
+                progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+              },
+            },
+          });
+        </script>
       </div>
     </div>
-    <div class="middle1">
-      <p>WE ARE UNITED</p>
+    <a href="https://store.manutd.com/ko/">
+      <div class="middle1"></div>
+    </a>
+    <div class="topic">
+      <div class="hr"></div>
+      <p class="today">Player</p>
     </div>
-    <div class="kickoff">
-      Manchester United Match: <span id="match-status"></span>
+    <div class="container">
+      <div class="heroes">
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+        <div class="hero">
+          <div class="image"></div>
+        </div>
+      </div>
     </div>
     <a href="https://www.netflix.com/kr/title/81223488">
       <div class="middle2"></div>
     </a>
+    <div class="topic">
+      <div class="hr"></div>
+      <p class="today">History</p>
+    </div>
     <section class="tabsection">
       <div class="inner">
         <div class="imgbox"></div>
@@ -116,10 +328,9 @@
             </div>
             <div class="tabcontent">
               <div>
-                The term "빈티지" is translated to English as "vintage." This
-                term refers to classic styles, designs, and items associated
-                with a specific era or period. Vintage items carry the charm and
-                uniqu
+                The term "뮌헨" is translated to English as "vintage." This term
+                refers to classic styles, designs, and items associated with a
+                specific era or period. Vintage items carry the charm and uniqu
               </div>
             </div>
           </div>
@@ -131,7 +342,37 @@
         </div>
       </div>
     </section>
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer_container">
+        <div class="footer_apps">
+          <div class="footer_appdown">SNS</div>
+          <div class="footer_appbtn flex">
+            <button>인스타그램</button>
+            <button>카카오톡</button>
+          </div>
+        </div>
+
+        <section class="footer_info">
+          <div>
+            <strong>대표</strong> 양재훈 <strong>사업자번호</strong>112-119-117
+          </div>
+          <div>
+            <strong>직업정보제공사업 신고번호</strong> 2023-서울강남-1234
+          </div>
+          <div><strong>주소</strong> 서울시 강남구 서초동 HPE교육센터</div>
+          <div>
+            <strong>전화</strong> 1577-1577
+            <strong>고객문의</strong>fuckingthat@real.com
+          </div>
+          <p>
+            <strong>이용약관</strong>&nbsp;&nbsp;
+            <strong>개인정보처리방침</strong>&nbsp;&nbsp;
+            <strong>위치기반서비스 이용약관</strong>&nbsp;&nbsp;
+            <strong>이용자보호 비전과 계획</strong>&nbsp;&nbsp;
+          </p>
+        </section>
+      </div>
+    </footer>
     <script>
       // Function to calculate remaining time until the match ends
       function calculateRemainingTime(startTime, duration) {

@@ -1,9 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Bebas Neue", sans-serif;
 }
 body {
   background-color: rgb(236, 239, 241);
+  
 }
 header {
   top: 0;
@@ -26,7 +30,7 @@ header p {
 .menu {
   display: flex;
   gap: 60px;
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: relative;
 }
 .menu-bar {
@@ -66,7 +70,7 @@ header p {
   display: block;
   position: relative;
   z-index: 1;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .menu-bar.active li {
@@ -82,14 +86,13 @@ li {
   cursor: pointer;
 }
 .banner {
-  font-size: 1.7rem;
+  font-size: 2rem;
 }
 .menu ul {
   position: relative;
   border-bottom: 5px solid rgb(170, 0, 0);
   padding: 0px;
   transition: 0.5s;
-  font-weight: bold;
 }
 
 .menu ul::after {
@@ -114,6 +117,7 @@ li {
 .login {
   display: flex;
   gap: 30px;
+  font-size: 1.5rem;
 }
 .topic {
   width: 80%;
@@ -121,13 +125,19 @@ li {
   margin: 0 auto;
   padding-top: 50px;
 }
+.topic1 {
+  width: 80%;
+  text-align: left;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
 .hr {
   width: 80px;
   height: 3px;
   background-color: red;
 }
 .today {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
 }
 .main {
@@ -220,9 +230,33 @@ li {
 .main35 {
   display: flex;
   width: 100%;
-  height: 48%;
+  height: 600px;
   justify-content: space-between;
-  margin-top: 10px;
+  flex-direction: column;
+}
+#slide1 {
+  background-image: url(../맨유리버풀.png);
+  background-size: cover;
+  background-position: center;
+}
+#slide2 {
+  display: flex;
+}
+#slide2 .slide2_img {
+  width: 50%;
+  height: 100%;
+  background-image: url(../선수.png);
+  background-size: cover;
+  background-position: center;
+}
+.slide2_p {
+  width: 50%;
+  height: 100%;
+  padding-top: 150px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  background-color: black;
 }
 .main3,
 .main4,
@@ -232,13 +266,25 @@ li {
   height: 100%;
   border-radius: 15px;
 }
-.middle1,
+.middle1 {
+  width: 50%;
+  height: 230px;
+  margin: 0 auto;
+  background-color: rgb(185, 185, 185);
+  margin-top: 140px;
+  background-image: url(../쇼핑.png);
+  background-size: cover;
+  background-position: center;
+}
 .middle2 {
   width: 50%;
   height: 150px;
   margin: 0 auto;
   background-color: rgb(185, 185, 185);
-  margin-top: 50px;
+  margin-top: 70px;
+  background-image: url(../베컴.png);
+  background-size: cover;
+  background-position: 20% 10%;
 }
 .middle1 p {
   font-size: 3rem;
@@ -248,34 +294,8 @@ li {
   justify-content: center;
   align-items: center;
 }
-.middle2 {
-  background-image: url(../베컴.png);
-  background-size: cover;
-  background-position: 20% 10%;
-}
-.kickoff {
-  width: 100%;
-  height: 600px;
-  margin: 0 auto;
-  background-image: url(../올드.jpg);
-  background-size: cover;
-  background-position: center;
-  background-color: black;
-  margin-top: 50px;
-  position: relative;
-}
-.kickoff::before {
-  content: "";
-  opacity: 20%;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-}
 .tabsection {
-  background-color: #fff;
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 .tabsection > .inner {
@@ -316,6 +336,7 @@ li {
   padding-right: 30px;
   transition: 0.5s;
   font-weight: bold;
+  font-size: 2rem;
 }
 
 .tabtitle div::after {
@@ -340,6 +361,7 @@ li {
 
 .tabcontent > div {
   display: none;
+  font-size: 1.2rem;
 }
 
 .tabcontent > div:first-child {
@@ -379,6 +401,7 @@ li {
   border: 2px solid rgb(126, 32, 32);
   background-color: rgb(126, 32, 32);
   margin-top: 10px;
+  font-size: 1.5rem;
 }
 
 .btn2 {
@@ -388,6 +411,7 @@ li {
   color: rgb(88, 88, 41);
   border: 2px solid rgb(88, 88, 41);
   margin-top: 10px;
+  font-size: 1.5rem;
 }
 .btn3 {
   display: inline-block;
@@ -397,9 +421,173 @@ li {
   border: 2px solid #fff;
   margin-top: 30px;
 }
-footer {
+.container {
   width: 100%;
+  height: 600px;
+  margin-top: 10px;
+}
+
+.container .heroes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.container .heroes .hero {
+  width: 200px;
   height: 200px;
-  margin-top: 50px;
-  background-color: brown;
+
+  margin: 4px;
+  border: 3px solid white;
+  border-radius: 10px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  background-color: #555;
+
+  transform: skewX(-14deg);
+  transition: transform 0.1s, background-color 0.6s;
+}
+
+.container .heroes .hero:hover {
+  transform: scale(1.3) skewX(-14deg);
+  z-index: 1;
+}
+
+.container .heroes .hero .image {
+  width: 140%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+  background-position: -10px -10px;
+  background-size: cover;
+
+  transform: skewX(14deg) translateX(-16px);
+}
+
+.container .heroes .hero:nth-child(1) .image {
+  background-image: url("../오나나.jpg");
+}
+.container .heroes .hero:nth-child(2) .image {
+  background-image: url("../바인드로.webp");
+}
+.container .heroes .hero:nth-child(3) .image {
+  background-image: url("../달로.jpg");
+}
+.container .heroes .hero:nth-child(4) .image {
+  background-image: url("../비사카.jpg");
+}
+.container .heroes .hero:nth-child(5) .image {
+  background-image: url("../리산마.jpg");
+}
+.container .heroes .hero:nth-child(6) .image {
+  background-image: url("../매과이어.jpg");
+}
+.container .heroes .hero:nth-child(7) .image {
+  background-image: url("../바란.webp");
+}
+.container .heroes .hero:nth-child(8) .image {
+  background-image: url("../쇼.jpg");
+}
+.container .heroes .hero:nth-child(9) .image {
+  background-image: url("../말라시아.jpg");
+}
+.container .heroes .hero:nth-child(10) .image {
+  background-image: url("../마이누.png");
+}
+
+.container .heroes .hero:nth-child(11) .image {
+  background-image: url("../마운트.jpg");
+}
+.container .heroes .hero:nth-child(12) .image {
+  background-image: url("../브루노.jpg");
+}
+.container .heroes .hero:nth-child(13) .image {
+  background-image: url("../카세미루.jpg");
+}
+.container .heroes .hero:nth-child(14) .image {
+  background-image: url("../아마드.jpg");
+}
+.container .heroes .hero:nth-child(15) .image {
+  background-image: url("../맥토미니.jpg");
+}
+.container .heroes .hero:nth-child(16) .image {
+  background-image: url("../안토니.jpg");
+}
+.container .heroes .hero:nth-child(17) .image {
+  background-image: url("../래시포드.jpg");
+}
+.container .heroes .hero:nth-child(18) .image {
+  background-image: url("../호일룬1.jpg");
+}
+.container .heroes .hero:nth-child(19) .image {
+  background-image: url("../가르나초.jpg");
+}
+.container .heroes .hero:nth-child(20) .image {
+  background-image: url("../마샬.jpg");
+}
+
+.container .heroes .hero:nth-child(21) .image {
+  background-image: url("../쇼리티레.jpg");
+}
+.footer {
+  color: #515255;
+  border: 1px solid #c3c4c7;
+  margin-top: 40px;
+}
+.footer {
+  color: rgb(0, 0, 0);
+}
+.footer_container {
+  max-width: 48rem;
+  margin: auto;
+}
+.footer_menu {
+  padding: 2rem 0;
+}
+.footer_apps {
+  float: right;
+}
+.footer_appdown {
+  font-size: 2rem;
+  margin-top: 20px;
+  line-height: 1.4;
+}
+.footer_appbtn {
+  width: 18.8rem;
+  justify-content: space-between;
+}
+.footer_appbtn button {
+  width: 48%;
+  height: 2.8rem;
+  padding: 0;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.footer_nav ul:nth-child(3) {
+  margin-right: 15%;
+}
+.footer_nav ul li {
+  margin-bottom: 1rem;
+}
+.footer_info {
+  padding: 1.5rem 0 6.3rem;
+  line-height: 1.5;
+  font-size: 0.82rem;
+}
+@media screen and (max-width: 768px) {
+  .footer_apps {
+    float: none;
+    display: flex;
+    margin-bottom: 1.25rem;
+  }
+  .footer_appbtn {
+    display: none;
+  }
 }
