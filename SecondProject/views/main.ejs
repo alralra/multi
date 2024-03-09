@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <p class="banner" button onclick="location.href='museum.html'">맨코</p>
+      <div class="menu">
+        <ul id="exhibition" data-tab="0">
+          뉴스
+        </ul>
+        <div class="menu-bar" id="menu-bar-exhibition">
+          <li button onclick="location.href='exhibition.html'">Present</li>
+          <li button onclick="location.href='exhibitionpast.html'">Past</li>
+        </div>
+
+        <ul id="education" data-tab="1">
+          선수단
+        </ul>
+        <div class="menu-bar" id="menu-bar-education">
+          <li button onclick="location.href='introduction.html'">
+            Introduction
+          </li>
+          <li button onclick="location.href='child.html'">Children</li>
+          <li button onclick="location.href='participation.html'">
+            Participation
+          </li>
+        </div>
+        <ul id="collection" data-tab="2">
+          커뮤니티
+        </ul>
+        <div class="menu-bar" id="menu-bar-collection">
+          <li button onclick="location.href='collection.html'">View</li>
+          <li button onclick="location.href='method.html'">Method</li>
+        </div>
+        <ul id="digital-art" data-tab="3">
+          역사
+        </ul>
+        <div class="menu-bar" id="menu-bar-digital-art">
+          <li button onclick="location.href='digital.html'">Main</li>
+          <li button onclick="location.href='gallery.html'">Gallery</li>
+        </div>
+      </div>
+
+      <div class="login">
+        <p>Visit</p>
+        <p button onclick="location.href='login.html'">Login</p>
+      </div>
+    </header>
+    <div class="topic">
+      <div class="hr"></div>
+      <p class="today">Today News</p>
+    </div>
+    <div class="main">
+      <div class="main12">
+        <div class="main1">
+          <div class="main1_news"></div>
+          <div class="main1_p">
+            <div class="hr"></div>
+            <p class="main1_p1">
+              ‘사실상 시즌 아웃’ 맨유 유리 몸 루크 쇼, 또다시 근육 부상으로 몇
+              달간 결장
+            </p>
+            <p class="main1_p2">
+              쇼는 빌라전에서 전반만 소화한 채 후반 시작과 함께 교체돼 경기를
+              마쳤다. 이후 이어진 루턴전에서 선발 출전했지만 경기를 더이상 뛰지
+              못하게 되면서 전반 추가시간 교체돼 경기장을 빠져나갔다.
+            </p>
+            <p class="main1_p3">더보기 》</p>
+          </div>
+        </div>
+        <div class="main2">
+          <div class="main2_news"></div>
+          <div class="main2_p">
+            <div class="hr"></div>
+            <p class="main2_p1">
+              호일룬, 4경기 5골 1도움→PL 이달의 선수상 '대반전'...
+            </p>
+            <p class="main2_p2">
+              최근 호일룬의 상승세가 매섭다. 호일룬은 지난달 2일 열린 울버햄튼
+              원더러스전 1골 1도움, 웨스트햄전 1골을 올리며 완벽하게 부활했다.
+              아스톤 빌라와 경기에서도 득점 행진을 이어갔고, 루턴 타운과 원정
+              경기에서는 멀티골을 터트리며 맨유의 2-1 승리를 견인했다.
+            </p>
+            <p class="main2_p3">더보기 》</p>
+          </div>
+        </div>
+      </div>
+      <div class="main35">
+        <div class="main3"></div>
+        <div class="main4"></div>
+        <div class="main5"></div>
+      </div>
+    </div>
+    <div class="middle1">
+      <p>WE ARE UNITED</p>
+    </div>
+    <div class="kickoff">
+      Manchester United Match: <span id="match-status"></span>
+    </div>
+    <a href="https://www.netflix.com/kr/title/81223488">
+      <div class="middle2"></div>
+    </a>
+    <section class="tabsection">
+      <div class="inner">
+        <div class="imgbox"></div>
+        <div class="tabbox">
+          <p>뮌헨 비행기 참사</p>
+          <div class="tab">
+            <div class="tabtitle">
+              <div class="on" data-tab="0">About Us</div>
+            </div>
+            <div class="tabcontent">
+              <div>
+                The term "빈티지" is translated to English as "vintage." This
+                term refers to classic styles, designs, and items associated
+                with a specific era or period. Vintage items carry the charm and
+                uniqu
+              </div>
+            </div>
+          </div>
+
+          <div class="btnbox">
+            <a href="#" class="btn">Get In Touch</a>
+            <a href="#" class="btn2">Read More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+    <script>
+      // Function to calculate remaining time until the match ends
+      function calculateRemainingTime(startTime, duration) {
+        const now = new Date();
+        const start = new Date(startTime);
+        const end = new Date(start.getTime() + duration * 60000);
+        const remainingTime = Math.max(0, end - now);
+        return remainingTime;
+      }
+
+      // Update match status
+      function updateMatchStatus() {
+        const startTime = new Date("2024-03-09T15:00:00"); // Replace with actual start time
+        const duration = 90; // Duration of the match in minutes
+        const remainingTime = calculateRemainingTime(startTime, duration);
+
+        if (remainingTime > 0) {
+          const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+          const minutes = Math.floor(
+            (remainingTime % (1000 * 60 * 60)) / (1000 * 60)
+          );
+          const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+          document.getElementById("match-status").innerText =
+            hours + "h " + minutes + "m " + seconds + "s remaining";
+        } else {
+          document.getElementById("match-status").innerText = "Match ended";
+        }
+      }
+
+      // Update match status every second
+      setInterval(updateMatchStatus, 1000);
+
+      // Initial update
+      updateMatchStatus();
+    </script>
+  </body>
+</html>
