@@ -1,6 +1,7 @@
 // 모듈 추출 및 서버 생성
 const express = require("express");
 const mysql = require("./routes/mysqlconn");
+const fs = require("fs");
 
 // 서버 생성
 const app = express();
@@ -18,6 +19,15 @@ app.use(express.static("public"));
 // ejs
 app.get("/", function (request, response) {
   response.render("main");
+});
+app.get("/", function (request, response) {
+  response.render("news");
+});
+//페이지 이동
+app.get("/news", function (req, res) {
+  fs.redFile("news.html", function (error, data) {
+    res.writeHead(200, { "Content-Type": "text/html" });
+  });
 });
 
 // body-parser

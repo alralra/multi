@@ -7,7 +7,6 @@
 }
 body {
   background-color: rgb(236, 239, 241);
-  
 }
 header {
   top: 0;
@@ -205,7 +204,7 @@ li {
   margin: 20px;
 }
 .main2_news {
-  background-image: url(../호일룬.jpg);
+  background-image: url(../호일룬.png);
   background-size: cover;
   background-position: center;
   border-radius: 15px 0 0 15px;
