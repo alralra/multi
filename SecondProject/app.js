@@ -23,13 +23,16 @@ app.get("/", function (request, response) {
 app.get("/", function (request, response) {
   response.render("news");
 });
+app.get("/", function (request, response) {
+  response.render("player");
+});
 //페이지 이동
 app.get("/news", function (req, res) {
-  fs.redFile("news.html", function (error, data) {
-    res.writeHead(200, { "Content-Type": "text/html" });
-  });
+  res.render("news.ejs")
 });
-
+app.get("/player", function (req, res) {
+  res.render("player.ejs")
+});
 // body-parser
 app.use(express.urlencoded({ extended: false }));
 

@@ -89,49 +89,42 @@
   </head>
   <body>
     <header>
-      <p class="banner" button onclick="location.href='museum.html'">Reds.KR</p>
+      <p class="banner" button onclick="location.href='/'">Reds.KR</p>
       <div class="menu">
-        <ul
+        <div
           id="exhibition"
           data-tab="0"
           button
-          onclick="location.href='/news.html'"
+          onclick="location.href='/news'"
         >
           News
-        </ul>
-        <div class="menu-bar" id="menu-bar-exhibition">
-          <li button onclick="location.href='exhibition.html'">Present</li>
-          <li button onclick="location.href='exhibitionpast.html'">Past</li>
         </div>
 
-        <ul id="education" data-tab="1">
+        <div
+          id="education"
+          data-tab="1"
+          button
+          onclick="location.href='/player'"
+        >
           Player
-        </ul>
-        <div class="menu-bar" id="menu-bar-education">
-          <li button onclick="location.href='introduction.html'">
-            Introduction
-          </li>
-          <li button onclick="location.href='child.html'">Children</li>
-          <li button onclick="location.href='participation.html'">
-            Participation
-          </li>
         </div>
-        <ul id="collection" data-tab="2">
+        <div
+          id="collection"
+          data-tab="2"
+          button
+          onclick="location.href='/community'"
+        >
           Community
-        </ul>
-        <div class="menu-bar" id="menu-bar-collection">
-          <li button onclick="location.href='collection.html'">View</li>
-          <li button onclick="location.href='method.html'">Method</li>
         </div>
-        <ul id="digital-art" data-tab="3">
+        <div
+          id="digital-art"
+          data-tab="3"
+          button
+          onclick="location.href='/history'"
+        >
           History
-        </ul>
-        <div class="menu-bar" id="menu-bar-digital-art">
-          <li button onclick="location.href='digital.html'">Main</li>
-          <li button onclick="location.href='gallery.html'">Gallery</li>
         </div>
       </div>
-
       <div class="login">
         <p>Visit</p>
         <p button onclick="location.href='login.html'">Login</p>
@@ -391,7 +384,7 @@
       // Update match status
       function updateMatchStatus() {
         const startTime = new Date("2024-03-09T15:00:00"); // Replace with actual start time
-        const duration = 90; // Duration of the match in minutes
+        const duration = 150; // Duration of the match in minutes
         const remainingTime = calculateRemainingTime(startTime, duration);
 
         if (remainingTime > 0) {

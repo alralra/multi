@@ -140,14 +140,14 @@ li {
 .main1 {
   width: 725px;
   height: 900px;
-  background-image: url(../public/이달의골.png);
+  background-image: url(../이달의골.png);
   background-size: cover;
   border-radius: 15px 0 0 15px;
 }
 .main2 {
   width: 725px;
   height: 900px;
-  background-image: url(../public/호일룬.png);
+  background-image: url(../호일룬.png);
   background-size: cover;
   border-radius: 0 15px 15px 0;
 }
@@ -224,28 +224,28 @@ li {
   width: 50%;
 }
 .mini1_news {
-  background-image: url(../public/루크쇼.jpg);
+  background-image: url(../루크쇼.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 15px 0 0 15px;
   height: 100%;
 }
 .mini2_news {
-  background-image: url(../public/린가드.png);
+  background-image: url(../린가드.png);
   background-size: cover;
   background-position: center;
   border-radius: 15px 0 0 15px;
   height: 100%;
 }
 .mini3_news {
-  background-image: url(../public/브루노뉴스.jpg);
+  background-image: url(../브루노뉴스.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 15px 0 0 15px;
   height: 100%;
 }
 .mini4_news {
-  background-image: url(../public/텐하흐.jpg);
+  background-image: url(../텐하흐.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 15px 0 0 15px;
