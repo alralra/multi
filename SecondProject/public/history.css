@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -117,185 +118,163 @@ li {
   gap: 30px;
   font-size: 1.5rem;
 }
-.all {
-  display: flex;
-}
-.sidemenu {
-  width: 100px;
-  height: 500px;
-  background-color: yellow;
-  margin-top: 150px;
-  position: fixed;
-}
-.newsbanner {
-  width: 1500px;
+.topic {
+  width: 80%;
+  text-align: left;
   margin: 0 auto;
-  margin-top: 50px;
-  border-radius: 30px;
+  padding-top: 50px;
 }
-.main {
-  display: flex;
-  gap: 50px;
-}
-.main1 {
-  width: 725px;
-  height: 900px;
-  background-image: url(../이달의골.png);
-  background-size: cover;
-  border-radius: 15px 0 0 15px;
-}
-.main2 {
-  width: 725px;
-  height: 900px;
-  background-image: url(../호일룬.png);
-  background-size: cover;
-  border-radius: 0 15px 15px 0;
-}
-.mini {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
-  margin-top: 100px;
-  flex-direction: column;
-}
-.mini12 {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-}
-.mini34 {
-  display: flex;
-  gap: 50px;
-  justify-content: center;
-}
-.mini1 {
-  width: 725px;
-  height: 400px;
-  border-radius: 10px;
-  display: flex;
-  background-color: white;
-}
-.mini2 {
-  width: 725px;
-  height: 400px;
-  background-color: white;
-  border-radius: 10px;
-  display: flex;
-}
-.mini3 {
-  width: 725px;
-  height: 400px;
-  border-radius: 10px;
-  display: flex;
-  background-color: white;
-}
-.mini4 {
-  width: 725px;
-  height: 400px;
-  border-radius: 10px;
-  display: flex;
-  background-color: white;
+.topic1 {
+  width: 80%;
+  text-align: left;
+  padding-top: 50px;
+  margin-bottom: 10px;
 }
 .hr {
   width: 80px;
   height: 3px;
   background-color: red;
 }
-.topic {
-  text-align: left;
-  margin: 0 auto;
-  padding-top: 50px;
-  margin-bottom: 10px;
-}
-.topic1 {
-  text-align: left;
-  width: 1500px;
-  margin: 0 auto;
-}
 .today {
   font-size: 2.5rem;
   font-weight: bold;
 }
-.mini1_news,
-.mini1_p,
-.mini2_news,
-.mini3_news,
-.mini4_news {
-  width: 50%;
+.bt {
+  cursor: pointer;
 }
-.mini1_news {
-  background-image: url(../루크쇼.jpg);
+.tabsection {
+  margin-top: 10px;
+}
+
+.tabsection > .inner {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  padding-left: 90px;
+}
+
+.tabbox {
+  width: 48%;
+}
+
+.imgbox {
+  width: 35%;
+  height: 600px;
   background-size: cover;
   background-position: center;
-  border-radius: 15px 0 0 15px;
-  height: 100%;
+  background-image: url(../뮌헨.png);
 }
-.mini2_news {
-  background-image: url(../린가드.png);
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px 0 0 15px;
-  height: 100%;
+
+.tabsection h3 {
+  text-align: left;
 }
-.mini3_news {
-  background-image: url(../브루노뉴스.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px 0 0 15px;
-  height: 100%;
-}
-.mini4_news {
-  background-image: url(../텐하흐.jpg);
-  background-size: cover;
-  background-position: center;
-  border-radius: 15px 0 0 15px;
-  height: 100%;
-}
-.mini1_p {
-  border-radius: 0 15px 15px 0;
-  margin: 20px;
-}
-.mini1_p .hr {
-  margin-top: 30px;
-}
-.mini1_p1 {
+
+.tabtitle {
+  display: flex;
   font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.tabtitle div {
+  position: relative;
+  border-bottom: 5px solid #ddd;
+  padding-right: 30px;
+  transition: 0.5s;
   font-weight: bold;
-  margin-top: 20px;
+  font-size: 2rem;
 }
-.mini1_p2 {
-  font-size: 1rem;
-  margin-top: 50px;
+
+.tabtitle div::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 5px;
+  background-color: rgb(126, 32, 32);
 }
-.mini1_p3 {
-  font-size: 1rem;
-  margin-top: 30px;
-  float: right;
+
+.tabtitle div.on {
+  color: rgb(126, 32, 32);
 }
-.mini2_news,
-.mini2_p {
-  width: 50%;
+
+.tabtitle div.on::after {
+  width: 100%;
+  transition: 1s;
 }
-.mini2_p {
-  border-radius: 0 15px 15px 0;
-  margin: 20px;
+
+.tabcontent > div {
+  display: none;
+  font-size: 1.2rem;
 }
-.mini2_p .hr {
-  margin-top: 30px;
+
+.tabcontent > div:first-child {
+  display: block;
 }
-.mini2_p1 {
+.tabbox p {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 1000px) {
+  .imgbox,
+  .tabbox {
+    width: 100%;
+  }
+
+  .tabtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .tabtitle {
+    font-size: 0.9rem;
+  }
+
+  .tabtitle div {
+    padding-right: 15px;
+  }
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid rgb(126, 32, 32);
+  background-color: rgb(126, 32, 32);
+  margin-top: 10px;
   font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 20px;
 }
-.mini2_p2 {
-  font-size: 1rem;
-  margin-top: 50px;
+
+.btn2 {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: rgb(88, 88, 41);
+  border: 2px solid rgb(88, 88, 41);
+  margin-top: 10px;
+  font-size: 1.5rem;
 }
-.mini2_p3 {
-  font-size: 1rem;
-  margin-top: 100px;
-  float: right;
+.btn3 {
+  display: inline-block;
+  padding: 10px 30px;
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #fff;
+  margin-top: 30px;
+}
+.trophy {
+  margin: 0 auto;
+  width: 80%;
+  height: 850px;
+  background-image: url(../트로피.png);
+  background-size: cover;
 }
 .footer {
   color: #515255;
@@ -354,7 +333,4 @@ li {
   .footer_appbtn {
     display: none;
   }
-}
-.bt{
-  cursor: pointer;
 }

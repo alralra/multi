@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Update Page</title>
+    <link rel="stylesheet" type="text/css" href="../update.css" />
+  </head>
+  <body>
+    <header>
+      <p class="banner" button onclick="location.href='/'">Reds.KR</p>
+      <div class="menu">
+        <div
+          id="exhibition"
+          class="bt"
+          data-tab="0"
+          button
+          onclick="location.href='/news'"
+        >
+          News
+        </div>
+
+        <div
+          id="education"
+          class="bt"
+          data-tab="1"
+          button
+          onclick="location.href='/player'"
+        >
+          Player
+        </div>
+        <div
+          id="collection"
+          class="bt"
+          data-tab="2"
+          button
+          onclick="location.href='/list'"
+        >
+          Community
+        </div>
+        <div
+          id="digital-art"
+          class="bt"
+          data-tab="3"
+          button
+          onclick="location.href='/history'"
+        >
+          History
+        </div>
+      </div>
+      <div class="login">
+        <p>Visit</p>
+        <p button onclick="location.href='/login'">Login</p>
+      </div>
+    </header>
+    <div class="topic1">
+      <div class="hr"></div>
+      <p class="today">Today News</p>
+    </div>
+    <section>
+      <form class="insert" method="post">
+        <div class="formContent">
+          <label for="title">닉네임</label>
+          <input
+            type="text"
+            name="bookid"
+            value="<%= item.bookid %>"
+            disabled
+          />
+          <br />
+          <label>제목</label>
+          <input
+            type="text"
+            name="bookname"
+            value="<%= item.bookname %>"
+            disabled
+          />
+          <br />
+          <label>내용</label>
+          <input
+            cols="10"
+            rows="10"
+            type="text"
+            name="publisher"
+            value="<%= item.publisher %>"
+            id="publisher"
+            disabled
+          />
+        </div>
+        <a href="../list">
+          <input type="button" class="insertBtn" value="목록" />
+        </a>
+      </form>
+    </section>
+  </body>
+</html>

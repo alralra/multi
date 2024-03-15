@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../header.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <p class="banner" button onclick="location.href='/'">Reds.KR</p>
+      <div class="menu">
+        <div
+          id="exhibition"
+          class="bt"
+          data-tab="0"
+          button
+          onclick="location.href='/news'"
+        >
+          News
+        </div>
+
+        <div
+          id="education"
+          class="bt"
+          data-tab="1"
+          button
+          onclick="location.href='/player'"
+        >
+          Player
+        </div>
+        <div
+          id="collection"
+          class="bt"
+          data-tab="2"
+          button
+          onclick="location.href='/list'"
+        >
+          Community
+        </div>
+        <div
+          id="digital-art"
+          class="bt"
+          data-tab="3"
+          button
+          onclick="location.href='/history'"
+        >
+          History
+        </div>
+      </div>
+      <div class="login">
+        
+        <div>
+          <% if(user_id) { %>
+          <div class="login">
+            <p class="login_id"><%= user_id %> 님</p>
+            <a class="logout" href="/logout">로그아웃</a>
+          </div>
+          <% } else { %>
+          <div class="login">
+            <a class="sign" href="/signin">로그인</a>
+            <a class="sign" href="/signup">회원가입</a>
+          </div>
+        </div>
+        <% } %>
+      </div>
+    </header>
+  </body>
+</html>

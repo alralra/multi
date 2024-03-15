@@ -5,222 +5,264 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="../player.css" />
     <title>Document</title>
-    <style>
-      .hero {
-        position: relative;
-      }
-
-      .hero .image {
-        transition: opacity 0.3s ease-in-out;
-      }
-
-      .hero:hover .image {
-        opacity: 0.5;
-      }
-
-      .hero-description {
-        position: absolute;
-        display: none;
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        pointer-events: none;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        z-index: 1;
-        width: max-content;
-      }
-
-      .hero:hover .hero-description {
-        display: block;
-      }
-    </style>
   </head>
   <body>
-    <header>
-      <p class="banner" button onclick="location.href='/'">Reds.KR</p>
-      <div class="menu">
-        <div
-          id="exhibition"
-          data-tab="0"
-          button
-          onclick="location.href='/news'"
-        >
-          News
-        </div>
-
-        <div
-          id="education"
-          data-tab="1"
-          button
-          onclick="location.href='/player'"
-        >
-          Player
-        </div>
-        <div
-          id="collection"
-          data-tab="2"
-          button
-          onclick="location.href='/community'"
-        >
-          Community
-        </div>
-        <div
-          id="digital-art"
-          data-tab="3"
-          button
-          onclick="location.href='/history'"
-        >
-          History
-        </div>
-      </div>
-      <div class="login">
-        <p>Visit</p>
-        <p button onclick="location.href='login.html'">Login</p>
-      </div>
-    </header>
+    <%- include("./header.ejs")%>
     <div class="topic1">
       <div class="hr"></div>
-      <p class="today">Today News</p>
+      <p class="today">We're Hero</p>
     </div>
     <div class="container">
       <div class="heroes">
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
           <div class="hero-description">
-            <p>설명 내용을 여기에 작성하세요.</p>
+            <p>
+              <br /><br />24 ANDRE ONANA <br /><br />"For me, it’s a big honour.
+              <br />It’s a big privilege to be part of this big club, <br />part
+              of this family." <br /><br />AGE : 27 <br />APPEARANCES : 38<br />CLEAN
+              SHEETS : 12
+            </p>
           </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />1 ALTAY BAYINDIR <br /><br />"It is a huge honour to
+              join Manchester United <br />and become the first Turkish player
+              to represent <br />this incredible club."<br /><br />AGE : 37
+              <br />APPEARANCES : 3<br />CLEAN SHEETS : 2
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />20 DIOGO DALOT <br /><br />"I will give everything for
+              this club, <br />for this shirt and, hopefully, help the club to
+              win. <br />That’s the most important"<br /><br />AGE : 24
+              <br />APPEARANCES : 144<br />TOTAL GOALS : 5
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />29 AARON WAN-BISSAKA <br /><br />"Every kid wants to
+              play for a team like this.<br />
+              It's an honour to represent this club."<br /><br />AGE : 26
+              <br />APPEARANCES : 177<br />TOTAL GOALS : 2
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />6 LISANDRO MARTINEZ <br /><br />"I’ve worked so hard
+              to get to this moment and,<br />
+              now that I’m here, I’m going to <br />push myself even
+              further."<br /><br />AGE : 26 <br />APPEARANCES : 55<br />TOTAL
+              GOALS : 1
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />5 HARRY MAGUIRE <br /><br />"It's an amazing club.<br />
+              It's a club I've always watched and <br />I always looked up to
+              when I was younger."<br /><br />AGE : 31 <br />APPEARANCES :
+              198<br />TOTAL GOALS : 9
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />19 RAPHAEL VARANE <br /><br />"I came here because I
+              wanted new emotions <br />and it was exactly what I expected and
+              bigger."<br /><br />AGE : 30 <br />APPEARANCES : 90<br />TOTAL
+              GOALS : 2
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />23 LUKE SHAW <br /><br />"I’ve got the freedom to play
+              <br />and that gives me the confidence in <br />what I want to do
+              to help the team."<br /><br />AGE : 28 <br />APPEARANCES : 275<br />TOTAL
+              GOALS : 4
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />12 TYRELL MALACIA <br /><br />"Whilst I know that I am
+              still young <br />and will continue to develop, <br />I can
+              promise the United fans that <br />I will leave everything on"<br /><br />AGE
+              : 24 <br />APPEARANCES : 39<br />TOTAL GOALS : 0
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />39 KOBBIE MAINOO <br /><br />"I Love United"<br /><br />AGE
+              : 28 <br />APPEARANCES : 22<br />TOTAL GOALS : 2
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />7 MASON MOUNT <br /><br />"I couldn’t be more excited
+              for the seasons ahead <br />and am ready for the hard work
+              expected here."<br /><br />AGE : 25 <br />APPEARANCES : 12<br />TOTAL
+              GOALS : 0
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />8 BRUNO FERNANDES <br /><br />"To play for United
+              feels incredible. <br />I can promise the fans <br />I will give
+              everything to help bring us success."<br /><br />AGE : 29
+              <br />APPEARANCES : 222<br />TOTAL GOALS : 72
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />18 CASEMIRO <br /><br />"To represent United is an
+              honour and <br />I am ready to give <br />everything to help the
+              team achieve <br />our ambitions."<br /><br />AGE : 32
+              <br />APPEARANCES : 72<br />TOTAL GOALS : 12
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />16 AMAD <br /><br />"I’m over the moon to be here.<br />
+              It’s a dream come true for me."<br /><br />AGE : 21
+              <br />APPEARANCES : 12<br />TOTAL GOALS : 1
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />39 SCOTT MCTOMINAY <br /><br />"You've got to keep
+              working hard.<br />
+              The moment you stop is <br />when things can go bad for you."<br /><br />AGE
+              : 27 <br />APPEARANCES : 242<br />TOTAL GOALS : 27
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />21 ANTONY <br /><br />"In Antony, <br />Manchester
+              United have a dynamic winger <br />who can light up the right-hand
+              side of our attack."<br /><br />AGE : 24 <br />APPEARANCES : 73<br />TOTAL
+              GOALS : 9
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />10 MARCUS RASHFORD <br /><br />"I have always been a
+              United fan, <br />so to be playing in the first team <br />really
+              is a dream come true."<br /><br />AGE : 26 <br />APPEARANCES :
+              393<br />TOTAL GOALS : 130
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />11 RASMUS HOJLUND <br /><br />"I want to bleed for
+              this jersey,<br />
+              and I want to win some trophies. <br />That’s why I came here."<br /><br />AGE
+              : 21 <br />APPEARANCES : 30<br />TOTAL GOALS : 13
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />17 ALEJANDRO GARNACHO <br /><br />"This is My Home"<br /><br />AGE
+              : 19 <br />APPEARANCES : 73<br />TOTAL GOALS : 12
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />9 ANTHONY MARTIAL <br /><br />"I love Manchester
+              United, <br />I love the fans, they give me a lot of joy."<br /><br />AGE
+              : 38 <br />APPEARANCES : 317<br />TOTAL GOALS : 90
+            </p>
+          </div>
         </div>
         <div class="hero" onclick="toggleHero(this)">
           <div class="image">1</div>
-          <div class="hero-description">설명 내용을 여기에 작성하세요.</div>
+          <div class="hero-description">
+            <p>
+              <br /><br />47 SHOLA SHORETIRE <br /><br />"I love Manchester
+              United, <br />Let's do this."<br /><br />AGE : 20
+              <br />APPEARANCES : 5<br />TOTAL GOALS : 0
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
     <script>
-      function toggleHero(clickedHero) {
-        var heroes = document.querySelectorAll(".hero");
+      // 모든 .hero 요소를 선택합니다.
+      const heroes = document.querySelectorAll(".hero");
 
-        // 클릭된 요소인지 확인
-        var isClicked = clickedHero.classList.contains("clicked");
+      // 각 .hero 요소에 클릭 이벤트 리스너를 추가합니다.
+      heroes.forEach((hero) => {
+        hero.addEventListener("click", () => {
+          // 클릭된 .hero 요소의 현재 상태를 확인합니다.
+          const isClicked = hero.classList.contains("clicked");
 
-        // 클릭된 요소가 아닌 다른 요소들을 숨김
-        for (var i = 0; i < heroes.length; i++) {
-          if (heroes[i] !== clickedHero) {
-            heroes[i].style.display = "none";
-          }
-        }
+          // 클릭된 .hero 요소를 제외한 모든 .hero 요소를 숨깁니다.
+          heroes.forEach((otherHero) => {
+            if (otherHero !== hero) {
+              otherHero.style.display = isClicked ? "inline-block" : "none";
+            }
+          });
 
-        // 클릭된 요소인 경우
-        if (!isClicked) {
-          // 클릭된 요소의 설명란만 보이도록 설정
-          var clickedDescription = clickedHero.querySelector(
-            ".hero-description"
-          );
-          clickedDescription.style.display = "block";
-
-          // 클릭된 요소에 clicked 클래스 추가
-          clickedHero.classList.add("clicked");
-
-          // 클릭된 요소를 화면 중앙으로 이동
-          clickedHero.style.position = "absolute";
-          clickedHero.style.left = "50%";
-          clickedHero.style.top = "50%";
-          clickedHero.style.transform =
-            "translate(-50%, -50%) skewX(-14deg) scale(3.6)";
-        } else {
-          // 클릭된 요소를 다시 클릭한 경우 모든 요소를 보이도록 설정
-          for (var i = 0; i < heroes.length; i++) {
-            heroes[i].style.display = "block";
-            heroes[i].style.position = "";
-            heroes[i].style.left = "";
-            heroes[i].style.top = "";
-            heroes[i].style.transform = "";
-          }
-
-          // 클릭된 요소의 clicked 클래스 제거
-          clickedHero.classList.remove("clicked");
-        }
-      }
+          // 클릭된 .hero 요소의 상태를 변경합니다.
+          hero.classList.toggle("clicked");
+        });
+      });
     </script>
   </body>
 </html>

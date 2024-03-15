@@ -33,7 +33,7 @@ router.post("/:id", function (request, response) {
     function (error, results) {
       if (!error) {
         console.log("edit-post");
-        response.redirect("/");
+        response.redirect("/list");
       } else {
         console.log("Error");
       }

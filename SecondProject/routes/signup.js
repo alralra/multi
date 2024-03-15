@@ -1,26 +1,32 @@
-// 모듈과 변수 선언
 const express = require("express");
 const mysql = require("./mysqlconn");
 
-// 라우터 객체 생성
 const router = express.Router();
 
-// 페이지 라우트
 router.get("/", function (request, response) {
-  response.render("insert");
+  response.render("signup");
 });
 
 router.post("/", function (request, response) {
   const body = request.body;
 
   mysql.query(
-    "INSERT INTO Book(bookid, bookname, publisher, price) VALUES(?,?,?,?)",
-    [body.bookid, body.bookname, body.publisher, body.price],
+    "INSERT INTO user(id, pw, name, tel, birth, email, address) VALUES(?,?,?,?,?,?,?)",
+    [
+      body.id,
+      body.pw,
+      body.name,
+      body.tel,
+      body.birth,
+      body.email,
+      body.address,
+    ],
     function (error, results) {
       if (!error) {
-        response.redirect("/list");
+        response.redirect("/");
       } else {
         console.log(error);
+        console.log("Error");
       }
     }
   );

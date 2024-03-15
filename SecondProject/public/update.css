@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Bebas Neue", sans-serif;
+}
+body {
+  background-color: rgb(241, 241, 241);
+}
+.hr {
+  width: 80px;
+  height: 3px;
+  background-color: red;
+}
+.topic {
+  text-align: left;
+  margin: 0 auto;
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+.topic1 {
+  text-align: left;
+  width: 1500px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.today {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+}
+.mini1_news,
+.mini1_p,
+.mini2_news,
+.mini3_news,
+.mini4_news {
+  width: 50%;
+}
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  padding: 1rem;
+  background: rgb(170, 0, 0);
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+}
+
+header ul,
+header p {
+  cursor: pointer;
+}
+.menu {
+  display: flex;
+  gap: 60px;
+  font-size: 2rem;
+  position: relative;
+}
+.menu-bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: rgb(170, 0, 0);
+  padding: 15px;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+.menu-bar.active {
+  display: flex;
+}
+
+.menu-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* 바의 높이를 조절할 수 있습니다. */
+  background: rgb(170, 0, 0);
+}
+
+.menu-bar p {
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.menu-bar li {
+  display: block;
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+}
+
+.menu-bar.active li {
+  display: block;
+}
+header .banner,
+header .menu,
+header .login {
+  color: rgb(255, 255, 255) !important; /* 투명하지 않은 흰색으로 설정 */
+  opacity: 1; /* 글자만 투명하지 않도록 설정 */
+}
+li {
+  cursor: pointer;
+}
+.banner {
+  font-size: 2rem;
+}
+.menu ul {
+  position: relative;
+  border-bottom: 5px solid rgb(170, 0, 0);
+  padding: 0px;
+  transition: 0.5s;
+}
+
+.menu ul::after {
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 5px;
+  background-color: darkkhaki;
+}
+
+.menu ul.on {
+  color: darkkhaki;
+}
+
+.menu ul.on::after {
+  width: 100%;
+  transition: 1s;
+}
+.login {
+  display: flex;
+  gap: 30px;
+  font-size: 1.5rem;
+}
+
+section {
+  max-width: 800px;
+  margin: 80px auto;
+}
+
+form {
+  position: relative;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.insertBtn {
+  width: 80px;
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  display: block;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  right: 0px;
+}
+
+.insertBtn:hover {
+  background-color: #0056b3;
+}
+#publisher {
+  height: 550px;
+  font-size: 2rem;
+  word-break: keep-all;
+}
+#publisher{
+  height: 550px;
+  font-size: 2rem;
+  word-break: keep-all;
+}
+.bt {
+  cursor: pointer;
+}

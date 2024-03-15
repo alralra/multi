@@ -7,55 +7,8 @@
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <p class="banner" button onclick="location.href='/'">Reds.KR</p>
-      <div class="menu">
-        <div
-          id="exhibition"
-          data-tab="0"
-          button
-          onclick="location.href='/news'"
-        >
-          News
-        </div>
-
-        <div
-          id="education"
-          data-tab="1"
-          button
-          onclick="location.href='/player'"
-        >
-          Player
-        </div>
-        <div
-          id="collection"
-          data-tab="2"
-          button
-          onclick="location.href='/community'"
-        >
-          Community
-        </div>
-        <div
-          id="digital-art"
-          data-tab="3"
-          button
-          onclick="location.href='/history'"
-        >
-          History
-        </div>
-      </div>
-      <div class="login">
-        <p>Visit</p>
-        <p button onclick="location.href='login.html'">Login</p>
-      </div>
-    </header>
+    <%- include("./header.ejs")%>
     <div class="all">
-      <div class="sidemenu">
-        <div class="side1"></div>
-        <div class="side2"></div>
-        <div class="side3"></div>
-      </div>
-
       <div class="newsbanner">
         <div class="topic">
           <div class="hr"></div>
@@ -146,8 +99,12 @@
         <div class="footer_apps">
           <div class="footer_appdown">SNS</div>
           <div class="footer_appbtn flex">
-            <button>인스타그램</button>
-            <button>카카오톡</button>
+            <a href="https://www.instagram.com/manchesterunited/">
+              <button>인스타그램</button>
+            </a>
+            <a href="https://pf.kakao.com/_EhMCM">
+              <button>카카오톡</button>
+            </a>
           </div>
         </div>
 

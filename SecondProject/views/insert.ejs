@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Insert Page</title>
+    <link rel="stylesheet" type="text/css" href="insert.css" />
+  </head>
+  <body>
+    <header>
+      <p class="banner" button onclick="location.href='/'">Reds.KR</p>
+      <div class="menu">
+        <div
+          id="exhibition"
+          class="bt"
+          data-tab="0"
+          button
+          onclick="location.href='/news'"
+        >
+          News
+        </div>
+
+        <div
+          id="education"
+          class="bt"
+          data-tab="1"
+          button
+          onclick="location.href='/player'"
+        >
+          Player
+        </div>
+        <div
+          id="collection"
+          class="bt"
+          data-tab="2"
+          button
+          onclick="location.href='/list'"
+        >
+          Community
+        </div>
+        <div
+          id="digital-art"
+          class="bt"
+          data-tab="3"
+          button
+          onclick="location.href='/history'"
+        >
+          History
+        </div>
+      </div>
+      <div class="login">
+        <p>Visit</p>
+        <p button onclick="location.href='/login'">Login</p>
+      </div>
+    </header>
+    <div class="topic1">
+      <div class="hr"></div>
+      <p class="today">Today News</p>
+    </div>
+    <section>
+      <form class="insert" method="post">
+        <div class="formContent">
+          <label for="title">닉네임</label>
+          <input type="text" id="bookid" name="bookid" required />
+          <br />
+          <label for="title">제목</label>
+          <input type="text" id="bookname" name="bookname" required />
+          <br />
+          <label for="title">내용</label>
+          <textarea
+            cols="10"
+            rows="10"
+            id="publisher"
+            name="publisher"
+            required
+          ></textarea>
+          <br />
+        </div>
+        <input type="submit" class="insertBtn" value="완료" />
+      </form>
+    </section>
+    <script></script>
+  </body>
+</html>

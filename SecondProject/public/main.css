@@ -147,7 +147,6 @@ li {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 10px;
 }
 .main12 {
   display: flex;
@@ -589,4 +588,12 @@ li {
   .footer_appbtn {
     display: none;
   }
+}
+.bt {
+  cursor: pointer;
+}
+.sign {
+  text-decoration-line: none;
+  color: white;
+  font-size: 1.2rem;
 }

@@ -13,7 +13,7 @@ router.get("/:id", function (request, response) {
     function (error, results) {
       if (!error) {
         console.log("삭제 완료");
-        response.redirect("/");
+        response.redirect("/list");
       } else {
         console.log("Error");
       }

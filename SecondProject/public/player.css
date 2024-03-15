@@ -267,6 +267,12 @@ li {
   justify-content: center;
   max-width: 1200px;
   width: 100%;
+  overflow: visible; /* 수정된 부분 */
+}
+.hero {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
 }
 
 .hero .image {
@@ -276,10 +282,6 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.hero {
-  position: relative; /* 요소 위치 설정 */
 }
 
 .hero-description {
@@ -293,13 +295,25 @@ li {
   pointer-events: none;
 }
 
-.hero:hover .hero-description {
-  display: block;
+
+
+.hero.clicked {
+  transform: scale(3) skewX(-14deg) !important ; /* .hero 요소의 크기를 확대합니다. */
+  margin-top: 250px !important;
 }
 
-.hero:hover {
-  opacity: 0.7;
+.hero.clicked .image {
+  transform: scale(1); /* 이미지는 원래 크기로 유지됩니다. */
 }
-.hero.clicked {
-  transform: scale(2);
+
+.hero.clicked .hero-description {
+  display: block;
+  transform: scale(2); /* 중복되는 스타일을 여기에 추가합니다. */
+  font-size: 0.3rem;
+  height: 400px;
+  padding-left: 100px;
+  width: 250px;
+}
+.bt{
+  cursor: pointer;
 }

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../signin.css" />
+    <title></title>
+  </head>
+  <body>
+    <main>
+      <%- include("./header.ejs")%>
+      <form method="post">
+        <div class="id_input">
+          <label for="id">아이디:</label>
+          <input type="text" name="inputId" id="id" />
+        </div>
+        <div class="pw_input">
+          <label for="pw">비밀번호:</label>
+          <input type="text" name="inputPw" id="pw" />
+        </div>
+        <input class="loginBtn" type="submit" value="로그인" />
+      </form>
+    </main>
+  </body>
+</html>
