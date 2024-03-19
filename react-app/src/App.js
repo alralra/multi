@@ -1,18 +1,22 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
-import Movie from "./0318/Movie";
-import Movie2 from "./0318/Movie2";
-import Practice from "./0318/practice";
-import PriceList from "./0318/PriceList";
+
+import ChangeValue from "./0319/ChangeValue";
+import Spread from "./0319/Spread";
+import React, { useState } from "react";
+import ChildComponent from "./0319/ChildComponent";
+import ChangeArray from "./0319/ChangeArray";
 
 function App() {
-  const priceList = [1000, 2000, 3000, 4000];
-  const prices = priceList.map((price) => <div>가격 : {price}원</div>);
+  const [value, setValue] = useState("");
+  function addDataHandler(data) {
+    setValue(data);
+  }
   return (
-    <>
-      <PriceList prices={prices} />
-    </>
+    <div>
+      <h3>ChildComponent로부터 전달받은 데이터 : {value} </h3>
+      <ChildComponent onAddData={addDataHandler} />
+    </div>
   );
 }
 export default App;
