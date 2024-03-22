@@ -1,11 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React, { useEffect, useState } from "react";
-import CheckBox from "./0320/CheckBox";
+import React, { useEffect, useState, useRef } from "react";
+import UseRefComponent3 from "./0322/UseRefComponent3";
+import InputValue from "./0322/InputValue";
 function App() {
   return (
     <>
-      <CheckBox cap={10000} shose={30000} bag={80000} />
+      <InputValue />
     </>
   );
 }
